@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica DWI</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Jose Manuel Soto</h1>
+        <p></p>
+        <nav>
+            <a href="#edad">Calculadora de edad</a>
+            <a href="#temperatura">Temperaturas</a>
+            <a href="#tareas">Lista de tareas</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="edad" class="tarjeta">
+            <h2>1. Calculadora de edad</h2>
+            <p>Escribe tu fecha de nacimiento.</p>
+            <div class="campos">
+                <label>Día
+                    <input type="number" id="dia" min="1" max="31" placeholder="Ej. 15">
+                </label>
+                <label>Mes
+                    <input type="number" id="mes" min="1" max="12" placeholder="Ej. 6">
+                </label>
+                <label>Año
+                    <input type="number" id="anio" min="1900" placeholder="Ej. 2005">
+                </label>
+            </div>
+            <button id="calcularEdad">Calcular edad</button>
+            <p id="resultadoEdad" class="resultado" aria-live="polite"></p>
+        </section>
+
+        <section id="temperatura" class="tarjeta">
+            <h2>2. Convertidor de temperatura</h2>
+            <p>Selecciona las unidades y escribe una temperatura.</p>
+            <label>Temperatura
+                <input type="number" id="valorTemperatura" placeholder="Ej. 25" step="any">
+            </label>
+            <div class="campos">
+                <label>De
+                    <select id="origen">
+                        <option value="">Selecciona</option>
+                        <option value="C">Celsius</option>
+                        <option value="F">Fahrenheit</option>
+                        <option value="K">Kelvin</option>
+                    </select>
+                </label>
+                <label>A
+                    <select id="destino">
+                        <option value="">Selecciona</option>
+                        <option value="C">Celsius</option>
+                        <option value="F">Fahrenheit</option>
+                        <option value="K">Kelvin</option>
+                    </select>
+                </label>
+            </div>
+            <button id="convertir" disabled>Convertir</button>
+            <p id="resultadoTemperatura" class="resultado" aria-live="polite"></p>
+        </section>
+
+        <section id="tareas" class="tarjeta">
+            <h2>3. Lista de tareas</h2>
+            <p>Agrega tareas y marca las que termines.</p>
+            <div class="agregar-tarea">
+                <input type="text" id="descripcionTarea" placeholder="Escribe una tarea">
+                <button id="agregarTarea">Agregar</button>
+            </div>
+            <p id="mensajeTarea" class="resultado" aria-live="polite"></p>
+            <ul id="listaTareas"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Práctica de laboratorio DWI · HTML, CSS y JavaScript</p>
+    </footer>
+</body>
+</html>

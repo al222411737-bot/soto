@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.5;
+}
+
+header {
+    background: #1d4ed8;
+    color: white;
+    text-align: center;
+    padding: 28px 16px;
+}
+
+header h1 {
+    margin: 0 0 8px;
+}
+
+header p {
+    margin: 0 0 18px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    background: #1e40af;
+    padding: 9px 13px;
+    border-radius: 7px;
+}
+
+nav a:hover {
+    background: #172554;
+}
+
+main {
+    width: min(900px, 92%);
+    margin: 25px auto;
+}
+
+.tarjeta {
+    background: white;
+    padding: 22px;
+    margin-bottom: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000012;
+}
+
+.tarjeta h2 {
+    margin-top: 0;
+    color: #1d4ed8;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+    min-width: 120px;
+}
+
+input, select, button {
+    font: inherit;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+input, select {
+    width: 100%;
+    border: 1px solid #cbd5e1;
+    background: white;
+}
+
+input:focus, select:focus {
+    outline: 2px solid #93c5fd;
+    border-color: #2563eb;
+}
+
+button {
+    border: none;
+    margin-top: 14px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+    background: #1e40af;
+}
+
+button:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+}
+
+.campos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 12px 0;
+}
+
+.resultado {
+    font-weight: bold;
+    color: #166534;
+}
+
+.agregar-tarea {
+    display: flex;
+    gap: 8px;
+}
+
+.agregar-tarea input {
+    flex: 1;
+    min-width: 0;
+}
+
+.agregar-tarea button {
+    margin-top: 0;
+}
+
+#listaTareas {
+    padding-left: 22px;
+}
+
+#listaTareas li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+#listaTareas li span {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+#listaTareas li .hecha {
+    text-decoration: line-through;
+    color: #64748b;
+}
+
+#listaTareas li input[type="checkbox"] {
+    width: auto;
+}
+
+#listaTareas li button {
+    margin: 0;
+    padding: 6px 9px;
+    background: #dc2626;
+}
+
+footer {
+    text-align: center;
+    color: #64748b;
+    padding: 10px 15px 25px;
+}
+
+@media (max-width: 520px) {
+    header {
+        padding: 22px 12px;
+    }
+
+    .tarjeta {
+        padding: 16px;
+    }
+
+    .agregar-tarea {
+        flex-direction: column;
+    }
+
+    .agregar-tarea button {
+        width: 100%;
+    }
+}
